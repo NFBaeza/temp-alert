@@ -1,0 +1,360 @@
+Command: /home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/miosa/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/temp-alert.elf /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/bootloader.elf -m '/home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/miosa/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15852
+ho 0 tail 12 room 4
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dev-1998-gc71d74e2f8 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Feb 20 2025 14:06:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e730h (124720) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002e758 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=0002e77c vaddr=3ffb0000 size=0189ch (  6300) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9df0ch (646924) map[0m
+[0;32mI (365) esp_image: segment 4: paddr=000cdf34 vaddr=3ffb189c size=026cch (  9932) load[0m
+[0;32mI (369) esp_image: segment 5: paddr=000d0608 vaddr=40080000 size=17aa0h ( 96928) load[0m
+[0;32mI (418) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (418) boot: Disabling RNG early entropy source...[0m
+[0;32mI (429) cpu_start: Multicore app[0m
+[0;32mI (437) cpu_start: Pro cpu start user code[0m
+[0;32mI (437) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (437) app_init: Application information:[0m
+[0;32mI (437) app_init: Project name:     temp-alert[0m
+[0;32mI (441) app_init: App version:      1[0m
+[0;32mI (445) app_init: Compile time:     Feb 20 2025 22:27:02[0m
+[0;32mI (450) app_init: ELF file SHA256:  6d2771713...[0m
+[0;32mI (454) app_init: ESP-IDF:          v5.5-dev-1998-gc71d74e2f8[0m
+[0;32mI (459) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (463) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (467) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (471) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (478) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (482) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (488) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (499) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (505) spi_flash: detected chip: generic[0m
+[0;32mI (508) spi_flash: flash io: dio[0m
+[0;33mW (511) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (523) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (533) main_task: Started on CPU0[0m
+[0;32mI (543) main_task: Calling app_main()[0m
+[0;32mI (563) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (573) wifi:wifi driver task: 3ffc078c, prio:23, stack:6656, core=0[0m
+[0;32mI (583) wifi:wifi firmware version: 03bba9d[0m
+[0;32mI (583) wifi:wifi certification version: v7.0[0m
+[0;32mI (583) wifi:config NVS flash: enabled[0m
+[0;32mI (583) wifi:config nano formatting: disabled[0m
+[0;32mI (583) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (593) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (593) wifi:Init management short buffer num: 32[0m
+[0;32mI (603) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (603) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (613) wifi:Init static rx buffer num: 10[0m
+[0;32mI (613) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (613) wifi_init: rx ba win: 6[0m
+[0;32mI (623) wifi_init: accept mbox: 6[0m
+[0;32mI (623) wifi_init: tcpip mbox: 32[0m
+[0;32mI (623) wifi_init: udp mbox: 6[0m
+[0;32mI (623) wifi_init: tcp mbox: 6[0m
+[0;32mI (633) wifi_init: tcp tx win: 5760[0m
+[0;32mI (633) wifi_init: tcp rx win: 5760[0m
+[0;32mI (633) wifi_init: tcp mss: 1440[0m
+[0;32mI (643) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (643) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (653) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (653) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (743) wifi:mode : sta (88:13:bf:24:3e:d8)[0m
+[0;32mI (743) wifi:enable tsf[0m
+[0;32mI (753) wifi station: wifi_init_sta finished.[0m
+[0;32mI (1543) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1543) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1563) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1573) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1943) wifi:connected with FRITZ!Box 6591 Cable ZE, aid = 1, channel 6, BW20, bssid = dc:15:c8:11:f3:4e[0m
+[0;32mI (1943) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (1963) wifi:pm start, type: 1[0m
+
+[0;32mI (1973) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1973) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1993) wifi:<ba-add>idx:0 (ifx:0, dc:15:c8:11:f3:4e), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2993) esp_netif_handlers: sta ip: 192.168.178.70, mask: 255.255.255.0, gw: 192.168.178.1[0m
+[0;32mI (2993) wifi station: got ip:192.168.178.70[0m
+[0;32mI (2993) wifi station: connected to ap SSID:FRITZ!Box 6591 Cable ZE[0m
+Broker url: mqtt://mqtt.eclipseprojects.io
+[0;32mI (3003) wifi station: Other event id:7[0m
+[0;32mI (3013) wifi:<ba-add>idx:1 (ifx:0, dc:15:c8:11:f3:4e), tid:0, ssn:0, winSize:64[0m
+[0;32mI (3043) main_task: Returned from app_main()[0m
+[0;32mI (3053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (3053) wifi station: Change mode...filter mode[0m
+[0;32mI (3393) wifi station: MQTT_EVENT_CONNECTED[0m
+[0;32mI (3393) wifi station: sent publish successful, msg_id=16680[0m
+[0;32mI (3393) wifi station: sent subscribe successful, msg_id=14597[0m
+[0;32mI (3393) wifi station: sent subscribe successful, msg_id=54113[0m
+[0;32mI (3403) wifi station: sent unsubscribe successful, msg_id=25736[0m
+[0;32mI (3573) wifi station: MQTT_EVENT_PUBLISHED, msg_id=16680[0m
+[0;32mI (4003) wifi station: MQTT_EVENT_SUBSCRIBED, msg_id=14597[0m
+[0;32mI (4003) wifi station: sent publish successful, msg_id=0[0m
+[0;32mI (4013) wifi station: MQTT_EVENT_SUBSCRIBED, msg_id=54113[0m
+[0;32mI (4013) wifi station: sent publish successful, msg_id=0[0m
+[0;32mI (4013) wifi station: MQTT_EVENT_UNSUBSCRIBED, msg_id=25736[0m
+[0;32mI (4213) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (4413) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (8053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (13053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (18053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (23053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (23053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (28053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (33053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (38053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (43053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (43053) wifi station: Change mode...filter mode[0m
+[0;32mI (48053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (53053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (58053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (63053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (63053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (68053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (73053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (78053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (83053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (83053) wifi station: Change mode...filter mode[0m
+[0;32mI (88053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (93053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (98053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (103053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (103053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (108053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (113053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (118053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (123053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (123053) wifi station: Change mode...filter mode[0m
+[0;32mI (128053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (133053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (138053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (143053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (143053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (148053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (153053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (158053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (163053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (163053) wifi station: Change mode...filter mode[0m
+[0;32mI (168053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (173053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (178053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (183053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (183053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (188053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (193053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (198053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (203053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (203053) wifi station: Change mode...filter mode[0m
+[0;32mI (208053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (213053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (218053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (223053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (223053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (228053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (233053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (238053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (243053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (243053) wifi station: Change mode...filter mode[0m
+[0;32mI (248053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (253053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (258053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (263053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (263053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (268053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (273053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (278053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (283053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (283053) wifi station: Change mode...filter mode[0m
+[0;32mI (288053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (293053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (298053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (303053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (303053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (308053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (313053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (318053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (323053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (323053) wifi station: Change mode...filter mode[0m
+[0;32mI (328053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (333053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (338053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (343053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (343053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (348053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (353053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (358053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (363053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (363053) wifi station: Change mode...filter mode[0m
+[0;32mI (368053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (373053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (378053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (383053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (383053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (388053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (393053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (398053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (403053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (403053) wifi station: Change mode...filter mode[0m
+[0;32mI (408053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (413053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (418053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (423053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (423053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (428053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (433053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (438053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (443053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (443053) wifi station: Change mode...filter mode[0m
+[0;32mI (448053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (453053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (458053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (463053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (463053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (468053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (473053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (478053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (483053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (483053) wifi station: Change mode...filter mode[0m
+[0;32mI (488053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (493053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (498053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (503053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (503053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (508053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (513053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (518053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (523053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (523053) wifi station: Change mode...filter mode[0m
+[0;32mI (528053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (533053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (538053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (543053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (543053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (548053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (553053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (558053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (563053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (563053) wifi station: Change mode...filter mode[0m
+[0;32mI (568053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (573053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (578053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (583053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (583053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (588053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (593053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (598053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (603053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (603053) wifi station: Change mode...filter mode[0m
+[0;32mI (608053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (613053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (618053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (623053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (623053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (628053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (633053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (638053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (643053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (643053) wifi station: Change mode...filter mode[0m
+[0;32mI (648053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (653053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (658053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (663053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (663053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (668053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (673053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (678053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (683053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (683053) wifi station: Change mode...filter mode[0m
+[0;32mI (688053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (693053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (698053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (703053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (703053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (708053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (713053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (718053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (723053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (723053) wifi station: Change mode...filter mode[0m
+[0;32mI (728053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (733053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (738053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (741913) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (743053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (743053) wifi station: Change mode...interrupt mode[0m
+[0;32mI (744413) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (744413) wifi:state: run -> init (0xc800)[0m
+[0;32mI (744423) wifi:pm stop, total sleep time: 648795687 us / 742451521 us[0m
+
+[0;32mI (744423) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (744423) wifi:<ba-del>idx:0, tid:6[0m
+[0;32mI (744423) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (744443) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (744443) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[0;32mI (744443) wifi station: retry to connect to the AP[0m
+[0;32mI (744453) wifi station: MQTT_EVENT_ERROR[0m
+[0;32mI (744453) wifi station: connect to the AP fail[0m
+[0;32mI (744463) wifi station: Last errno string (Software caused connection abort)[0m
+[1;31mE (744473) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (744473) wifi station: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (744653) wifi:new:<1,0>, old:<6,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (744653) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (744683) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (744683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (744713) wifi:connected with FRITZ!Box 6591 Cable ZE, aid = 1, channel 1, BW20, bssid = dc:15:c8:11:f3:4e[0m
+[0;32mI (744713) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (744733) wifi:pm start, type: 1[0m
+
+[0;32mI (744753) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (744753) wifi:<ba-add>idx:0 (ifx:0, dc:15:c8:11:f3:4e), tid:6, ssn:2, winSize:64[0m
+[0;32mI (745763) esp_netif_handlers: sta ip: 192.168.178.70, mask: 255.255.255.0, gw: 192.168.178.1[0m
+[0;32mI (745763) wifi station: got ip:192.168.178.70[0m
+[0;32mI (748053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (753053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (754483) wifi station: Other event id:7[0m
+[0;32mI (754893) wifi station: MQTT_EVENT_CONNECTED[0m
+[0;32mI (754893) wifi station: sent publish successful, msg_id=44152[0m
+[0;32mI (754903) wifi station: sent subscribe successful, msg_id=37915[0m
+[0;32mI (754903) wifi station: sent subscribe successful, msg_id=47824[0m
+[0;32mI (754903) wifi station: sent unsubscribe successful, msg_id=61876[0m
+[0;32mI (755103) wifi station: MQTT_EVENT_PUBLISHED, msg_id=44152[0m
+[0;32mI (755983) wifi:<ba-add>idx:1 (ifx:0, dc:15:c8:11:f3:4e), tid:0, ssn:8, winSize:64[0m
+[0;32mI (755983) wifi station: MQTT_EVENT_SUBSCRIBED, msg_id=37915[0m
+[0;32mI (755993) wifi station: sent publish successful, msg_id=0[0m
+[0;32mI (755993) wifi station: MQTT_EVENT_SUBSCRIBED, msg_id=47824[0m
+[0;32mI (755993) wifi station: sent publish successful, msg_id=0[0m
+[0;32mI (756003) wifi station: MQTT_EVENT_UNSUBSCRIBED, msg_id=61876[0m
+[0;32mI (756123) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (756463) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (758053) wifi station: Waiting for any pad being touched...[0m
+[0;32mI (763053) wifi station: Waiting for any pad being touched...[0m
+[0;33mW (763053)

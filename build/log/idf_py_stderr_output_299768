@@ -1,0 +1,92 @@
+Command: /home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/miosa/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/temp-alert.elf /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/bootloader.elf -m '/home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/miosa/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b46f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401576cd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8c90: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a6d6: vPortClearInterruptMaskFromISR at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+0x400e5646: touch_pad_intr_enable at /home/miosa/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c:252
+0x400d8b2c: tp_example_read_task(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:195
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b46f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401576cd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8c90: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a6d6: vPortClearInterruptMaskFromISR at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+0x400e5646: touch_pad_intr_enable at /home/miosa/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c:252
+0x400d8b2c: tp_example_read_task(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:195
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b46f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401576cd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8c90: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a6d6: vPortClearInterruptMaskFromISR at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+0x400e5646: touch_pad_intr_enable at /home/miosa/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c:252
+0x400d8b2c: tp_example_read_task(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:195
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/compone

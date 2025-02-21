@@ -1,0 +1,135 @@
+Command: /home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/miosa/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/temp-alert.elf /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/bootloader.elf -m '/home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/miosa/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15852
+ho 0 tail 12 room 4
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dev-1998-gc71d74e2f8 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Feb 20 2025 14:06:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1db54h (121684) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0002db7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002dba0 vaddr=3ffb0000 size=02478h (  9336) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9c4e8h (640232) map[0m
+[0;32mI (361) esp_image: segment 4: paddr=000cc510 vaddr=3ffb2478 size=01aa8h (  6824) load[0m
+[0;32mI (364) esp_image: segment 5: paddr=000cdfc0 vaddr=40080000 size=17a68h ( 96872) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (414) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (433) cpu_start: Pro cpu start user code[0m
+[0;32mI (433) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (433) app_init: Application information:[0m
+[0;32mI (433) app_init: Project name:     temp-alert[0m
+[0;32mI (438) app_init: App version:      1[0m
+[0;32mI (441) app_init: Compile time:     Feb 20 2025 20:08:35[0m
+[0;32mI (446) app_init: ELF file SHA256:  f6ba7f180...[0m
+[0;32mI (450) app_init: ESP-IDF:          v5.5-dev-1998-gc71d74e2f8[0m
+[0;32mI (456) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (460) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (464) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (468) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (474) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (479) heap_init: At 3FFB87B8 len 00027848 (158 KiB): DRAM[0m
+[0;32mI (484) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (489) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (495) heap_init: At 40097A68 len 00008598 (33 KiB): IRAM[0m
+[0;32mI (502) spi_flash: detected chip: generic[0m
+[0;32mI (504) spi_flash: flash io: dio[0m
+[0;33mW (507) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (520) main_task: Started on CPU0[0m
+[0;32mI (530) main_task: Calling app_main()[0m
+[0;32mI (550) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (570) wifi:wifi driver task: 3ffc06b0, prio:23, stack:6656, core=0[0m
+[0;32mI (580) wifi:wifi firmware version: 03bba9d[0m
+[0;32mI (580) wifi:wifi certification version: v7.0[0m
+[0;32mI (580) wifi:config NVS flash: enabled[0m
+[0;32mI (580) wifi:config nano formatting: disabled[0m
+[0;32mI (580) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (590) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (590) wifi:Init management short buffer num: 32[0m
+[0;32mI (600) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (600) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (610) wifi:Init static rx buffer num: 10[0m
+[0;32mI (610) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (610) wifi_init: rx ba win: 6[0m
+[0;32mI (620) wifi_init: accept mbox: 6[0m
+[0;32mI (620) wifi_init: tcpip mbox: 32[0m
+[0;32mI (620) wifi_init: udp mbox: 6[0m
+[0;32mI (620) wifi_init: tcp mbox: 6[0m
+[0;32mI (630) wifi_init: tcp tx win: 5760[0m
+[0;32mI (630) wifi_init: tcp rx win: 5760[0m
+[0;32mI (630) wifi_init: tcp mss: 1440[0m
+[0;32mI (640) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (640) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (640) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (650) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (740) wifi:mode : sta (88:13:bf:24:3e:d8)[0m
+[0;32mI (740) wifi:enable tsf[0m
+[0;32mI (750) wifi station: wifi_init_sta finished.[0m
+[0;32mI (870) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (870) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (880) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (900) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (930) wifi:connected with FRITZ!Box 6591 Cable ZE, aid = 1, channel 6, BW20, bssid = dc:15:c8:11:f3:4e[0m
+[0;32mI (940) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (940) wifi:pm start, type: 1[0m
+
+[0;32mI (940) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (980) wifi:<ba-add>idx:0 (ifx:0, dc:15:c8:11:f3:4e), tid:6, ssn:2, winSize:64[0m
+[0;32mI (1070) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1990) esp_netif_handlers: sta ip: 192.168.178.70, mask: 255.255.255.0, gw: 192.168.178.1[0m
+[0;32mI (1990) wifi station: got ip:192.168.178.70[0m
+[0;32mI (1990) wifi station: connected to ap SSID:FRITZ!Box 6591 Cable ZE[0m
+Broker url: mqtt://mqtt.eclipseprojects.io
+[0;32mI (2000) wifi station: Other event id:7[0m
+[0;32mI (2000) main_task: Returned from app_main()[0m
+[0;32mI (2020) wifi:<ba-add>idx:1 (ifx:0, dc:15:c8:11:f3:4e), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2420) wifi station: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2430) wifi station: sent publish successful, msg_id=39469[0m
+[0;32mI (2430) wifi station: sent subscribe successful, msg_id=48751[0m
+[0;32mI (2430) wifi station: sent subscribe successful, msg_id=31842[0m
+[0;32mI (2430) wifi station: sent unsubscribe successful, msg_id=61640[0m
+[0;32mI (2550) wifi station: MQTT_EVENT_PUBLISHED, msg_id=39469[0m
+[0;32mI (2920) wifi station: MQTT_EVENT_SUBSCRIBED, msg_id=48751[0m
+[0;32mI (2930) wifi station: sent publish successful, msg_id=0[0m
+[0;32mI (2930) wifi station: MQTT_EVENT_SUBSCRIBED, msg_id=31842[0m
+[0;32mI (2930) wifi station: sent publish successful, msg_id=0[0m
+[0;32mI (2940) wifi station: MQTT_EVENT_UNSUBSCRIBED, msg_id=61640[0m
+[0;32mI (3130) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (4050) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (256770) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (257180) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (534480) wifi station: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=
+[0;32mI (818810) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (821310) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (821310) wifi:state: run -> init (0xc800)[0m
+[0;32mI (821330) wifi:pm stop, total sleep time: 708981960 us / 820384945 us[0m
+
+[0;32mI (821330) wifi:<ba-del>

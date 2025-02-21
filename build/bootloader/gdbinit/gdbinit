@@ -1,0 +1,2 @@
+source /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/gdbinit/symbols
+source /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/gdbinit/connect

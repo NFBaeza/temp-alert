@@ -1,0 +1,283 @@
+Command: /home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/miosa/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/temp-alert.elf /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/bootloader.elf -m '/home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/miosa/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b39f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401575fd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8bf0: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b39f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401575fd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8bf0: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b39f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401575fd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8bf0: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b39f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401575fd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8bf0: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400e552b: touch_pad_filter_cb at /home/miosa/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c:109
+0x4012b1a6: timer_process_alarm at /home/miosa/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4012b1f5: timer_task at /home/miosa/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40081a4d: panic_abort at /home/miosa/esp-idf/components/esp_system/panic.c:454
+0x40089899: esp_system_abort at /home/miosa/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4009154d: abort at /home/miosa/esp-idf/components/newlib/src/abort.c:38
+0x40082c5b: lock_acquire_generic at /home/miosa/esp-idf/components/newlib/src/locks.c:139
+0x40082d99: _lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:168
+0x40082e12: __retarget_lock_acquire_recursive at /home/miosa/esp-idf/components/newlib/src/locks.c:327
+0x4015b39f: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x401575fd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4008fe4f: esp_log_va at /home/miosa/esp-idf/components/log/src/log.c:57
+ (inlined by) esp_log at /home/miosa/esp-idf/components/log/src/log.c:120
+0x400d8bf0: tp_example_rtc_intr(void*) at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:180 (discriminator 2)
+0x400829fc: rtc_isr at /home/miosa/esp-idf/components/esp_hw_support/rtc_module.c:74
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/miosa/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x401168ae: scan_profile_check at ??:?
+0x40118141: scan_parse_beacon at ??:?
+0x4011a8d8: sta_recv_mgmt at ??:?
+0x400912f6: sta_input at ??:?
+0x40091359: sta_rx_cb at ??:?
+0x40095a1d: ppRxPkt at ??:?
+0x40093220: ppTask at ??:?
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400e54cb: touch_ll_is_measure_done at /home/miosa/esp-idf/components/hal/esp32/include/hal/touch_sensor_ll.h:171
+ (inlined by) _touch_pad_read at /home/miosa/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c:369
+0x400e551d: touch_pad_filter_cb at /home/miosa/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c:108
+0x4012b1a6: timer_process_alarm at /home/miosa/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4012b1f5: timer_task at /home/miosa/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main_task at /home/miosa/esp-idf/components/freertos/app_startup.c:208
+0x4008a33d: vPortTaskWrapper at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400dd962: task_wdt_timeout_handling at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:430
+0x400ddd24: task_wdt_isr at /home/miosa/esp-idf/components/esp_system/task_wdt/task_wdt.c:503
+0x40083495: _xt_lowint1 at /home/miosa/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d9121: app_main at /home/miosa/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:394
+ (inlined by) app_main at /home/miosa/Documents/projects/esp32-sandbox/temp-alert/main/temp-alert.cpp:279
+0x4016c364: main
