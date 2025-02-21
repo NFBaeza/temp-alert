@@ -82,4 +82,5 @@
 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/esp-idf/rt/librt.a
 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/esp-idf/spiffs/libspiffs.a
 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+/home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/esp-idf/mqtt_class/libmqtt_class.a
 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/esp-idf/main/libmain.a

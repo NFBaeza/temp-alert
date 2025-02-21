@@ -1,6 +1,0 @@
-Command: ninja all
-[1/4] cd /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/esp-idf/esptool_py && /home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/miosa/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/partition_table/partition-table.bin /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/temp-alert.bin
-temp-alert.bin binary size 0xd75b0 bytes. Smallest app partition is 0x100000 bytes. 0x28a50 bytes (16%) free.
-[2/4] Performing build step for 'bootloader'
-[1/1] cd /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/esp-idf/esptool_py && /home/miosa/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/miosa/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/miosa/Documents/projects/esp32-sandbox/temp-alert/build/bootloader/bootloader.bin
-Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
